@@ -5,16 +5,13 @@ import React, { useState, useEffect } from "react";
 export default function PostsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // 1. 动态数据 State
   const [scannedCount, setScannedCount] = useState(1204);
   const [hitsCount, setHitsCount] = useState(28);
 
-  // 2. 优雅的心跳逻辑：每5秒跳动一次
   useEffect(() => {
     const interval = setInterval(() => {
       setScannedCount(prev => prev + Math.floor(Math.random() * 3) + 1);
       
-      // 10% 的概率增加一条高相关命中
       if (Math.random() > 0.9) {
         setHitsCount(prev => prev + 1);
       }
@@ -29,19 +26,9 @@ export default function PostsPage() {
       category: "Investment Research",
       status: "Reviewed",
       score: "20/25",
-      content: `Investment research does not have an information shortage.
-It has a filtering problem.
-
-Analysts already have access to filings, earnings transcripts, expert calls, and market news. The harder part is deciding what actually matters before forming a view.
-
-This is where AI research agents become interesting. Not because they can write a polished paragraph, but because they help with the messy middle of research:
-• Scanning large volumes of company information
-• Comparing management commentary across quarters
-• Flagging inconsistencies between filings and earnings calls
-
-The analyst's role does not disappear in this workflow. It moves closer to verification and judgment.
-
-For investment teams, AI may make the first draft of research faster. But conviction still needs to be earned by people.`,
+      audience: "Junior/Mid-level Analysts & Portfolio Managers",
+      tone: "Pragmatic, instructional, and mildly contrarian",
+      content: `Investment research does not have an information shortage.\nIt has a filtering problem.\n\nAnalysts already have access to filings, earnings transcripts, expert calls, and market news. The harder part is deciding what actually matters before forming a view.\n\nThis is where AI research agents become interesting. Not because they can write a polished paragraph, but because they help with the messy middle of research:\n• Scanning large volumes of company information\n• Comparing management commentary across quarters\n• Flagging inconsistencies between filings and earnings calls\n\nThe analyst's role does not disappear in this workflow. It moves closer to verification and judgment.\n\nFor investment teams, AI may make the first draft of research faster. But conviction still needs to be earned by people.`,
       image: "Research workflow dashboard showing company filings, earnings transcripts, and analyst verification checkpoints.",
     },
     {
@@ -49,21 +36,9 @@ For investment teams, AI may make the first draft of research faster. But convic
       category: "Operating Model",
       status: "Reviewed",
       score: "18/25",
-      content: `The easiest AI project to approve is often the least useful one.
-
-A team finds a repetitive task. They add an AI tool. The task becomes faster. That is useful, but it is not the same as changing the operating model.
-
-In financial services, the larger productivity question is usually not: "How many hours can this save?"
-
-It is closer to: "What should the workflow look like now that some work can be done differently?"
-
-For example, if AI is added to a middle-office process, the team still needs to decide:
-• Where human judgment is required
-• Which outputs need review before they are trusted
-• How exceptions are escalated
-• Who is accountable when the output is wrong
-
-The better use case is not only automation. It is redesigning the workflow around what AI can and cannot do well.`,
+      audience: "Financial COOs & Operations Directors",
+      tone: "Executive briefing, highly analytical",
+      content: `The easiest AI project to approve is often the least useful one.\n\nA team finds a repetitive task. They add an AI tool. The task becomes faster. That is useful, but it is not the same as changing the operating model.\n\nIn financial services, the larger productivity question is usually not: "How many hours can this save?"\n\nIt is closer to: "What should the workflow look like now that some work can be done differently?"\n\nFor example, if AI is added to a middle-office process, the team still needs to decide:\n• Where human judgment is required\n• Which outputs need review before they are trusted\n• How exceptions are escalated\n• Who is accountable when the output is wrong\n\nThe better use case is not only automation. It is redesigning the workflow around what AI can and cannot do well.`,
       image: "Before-and-after operating model diagram showing an old approval-heavy process becoming a cleaner AI-supported workflow.",
     },
     {
@@ -71,22 +46,11 @@ The better use case is not only automation. It is redesigning the workflow aroun
       category: "Fintech Products",
       status: "Pending",
       score: "22/25",
-      content: `AI is making fintech products cheaper to build.
-That does not mean fintech companies are easier to build.
-
-A small team can now prototype a financial planning tool, lending assistant, or compliance workflow much faster than before. The cost of building the first version is falling.
-
-But in financial services, product building is only one part of the business model.
-
-The harder questions come later:
-• Can users trust the recommendation?
-• Can the product explain its logic?
-• Can it handle sensitive financial data safely?
-• Can it meet regulatory expectations?
-
-AI lowers the cost of software creation. It does not automatically lower the cost of trust. That may become the real divide between AI-native fintech products that scale and those that stay as demos.`,
+      audience: "Fintech Founders & Product Managers",
+      tone: "Strategic, cautionary, and forward-looking",
+      content: `AI is making fintech products cheaper to build.\nThat does not mean fintech companies are easier to build.\n\nA small team can now prototype a financial planning tool, lending assistant, or compliance workflow much faster than before. The cost of building the first version is falling.\n\nBut in financial services, product building is only one part of the business model.\n\nThe harder questions come later:\n• Can users trust the recommendation?\n• Can the product explain its logic?\n• Can it handle sensitive financial data safely?\n• Can it meet regulatory expectations?\n\nAI lowers the cost of software creation. It does not automatically lower the cost of trust. That may become the real divide between AI-native fintech products that scale and those that stay as demos.`,
       image: "Split layout graphic: 'Cheaper to Build' vs. 'Still Hard to Scale' (trust, compliance, data security).",
-    },
+    }
   ];
 
   const categories = ["All", "Investment Research", "Operating Model", "Fintech Products"];
@@ -95,7 +59,6 @@ AI lowers the cost of software creation. It does not automatically lower the cos
     (post) => activeCategory === "All" || post.category === activeCategory
   );
 
-  // Design Tokens - Institutional Style
   const colors = {
     bgMain: "#ffffff",
     bgSidebar: "#f8f9fa",
@@ -141,6 +104,7 @@ AI lowers the cost of software creation. It does not automatically lower the cos
               {hitsCount.toLocaleString()}
             </div>
           </div>
+          {/* Pending 数据 */}
           <div style={{ borderBottom: `1px solid ${colors.border}`, paddingBottom: "12px" }}>
             <div style={{ fontSize: "12px", color: colors.textSecondary, marginBottom: "4px" }}>Pending Audit</div>
             <div style={{ fontSize: "24px", color: colors.textPrimary, fontFamily: fonts.serif }}>1</div>
@@ -183,8 +147,8 @@ AI lowers the cost of software creation. It does not automatically lower the cos
       <main style={{ flex: 1, padding: "48px 72px", overflowY: "auto" }}>
         <div style={{ maxWidth: "800px" }}>
           
-          {/* Header */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "48px", paddingBottom: "24px", borderBottom: `2px solid ${colors.textPrimary}` }}>
+          {/* Header Deleted */}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "48px", paddingBottom: "16px" }}>
             <div>
               <h2 style={{ fontFamily: fonts.serif, color: colors.textPrimary, fontSize: "32px", margin: "0 0 12px 0", fontWeight: "normal" }}>
                 Research & Insights
@@ -240,12 +204,25 @@ AI lowers the cost of software creation. It does not automatically lower the cos
                 fontFamily: fonts.serif, 
                 color: colors.textPrimary, 
                 fontSize: "26px", 
-                margin: "0 0 32px 0", 
+                margin: "0 0 24px 0", 
                 lineHeight: "1.3",
                 fontWeight: "normal"
               }}>
                 {post.title}
               </h3>
+
+              {/* Audience and Tone */}
+              <div style={{ display: "flex", gap: "24px", marginBottom: "32px", padding: "16px", background: colors.bgSidebar, border: `1px solid ${colors.border}`, borderRadius: "4px" }}>
+                <div>
+                  <div style={{ fontSize: "10px", color: colors.textMuted, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontWeight: "bold" }}>Target Audience</div>
+                  <div style={{ fontSize: "13px", color: colors.textPrimary }}>{post.audience}</div>
+                </div>
+                <div style={{ borderLeft: `1px solid ${colors.border}` }}></div>
+                <div>
+                  <div style={{ fontSize: "10px", color: colors.textMuted, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "4px", fontWeight: "bold" }}>Tone & Positioning</div>
+                  <div style={{ fontSize: "13px", color: colors.textPrimary }}>{post.tone}</div>
+                </div>
+              </div>
 
               {/* Content */}
               <pre
