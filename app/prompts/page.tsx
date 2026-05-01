@@ -70,7 +70,7 @@ export default function PromptsPage() {
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         
         {/* Header */}
-        <div style={{ borderBottom: `2px solid ${colors.textPrimary}`, paddingBottom: "24px", marginBottom: "48px" }}>
+        <div style={{ paddingBottom: "24px", marginBottom: "48px" }}>
           <h2 style={{ fontFamily: fonts.serif, color: colors.textPrimary, fontSize: "36px", margin: "0 0 16px 0", fontWeight: "normal" }}>
             System Prompt Registry
           </h2>
