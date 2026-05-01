@@ -23,7 +23,7 @@ export default function HomePage() {
       <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
         
         {/* Header Section */}
-        <div style={{ marginBottom: "64px", borderBottom: `2px solid ${colors.textPrimary}`, paddingBottom: "32px" }}>
+        <div style={{ marginBottom: "64px", paddingBottom: "16px" }}>
           <h1 style={{ fontFamily: fonts.serif, fontSize: "40px", margin: "0 0 16px 0", fontWeight: "normal", color: colors.textPrimary }}>
             AI Finance Insight Radar
           </h1>
