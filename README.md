@@ -122,7 +122,7 @@ This system follows principles inspired by institutional finance environments:
 * Next.js 14 (App Router)
 * React 18
 * TypeScript
-* Tailwind CSS
+* Custom React Inline Styles
 * Mammoth.js (DOCX parsing)
 
 ---
