@@ -4,7 +4,7 @@ An AI-powered insight generation and prompt engineering system designed for fina
 
 ---
 
-## 🔍 Business Problem
+##  Business Problem
 
 The rapid advancement of AI has triggered widespread discussion about its impact on financial analysts. However, the real bottleneck is not model capability — it is **workflow integration**.
 
@@ -20,7 +20,7 @@ This project addresses a key question:
 
 ---
 
-## 🧠 Solution Overview
+##  Solution Overview
 
 AI Finance Insight Radar is a structured system that transforms raw prompts into:
 
@@ -33,7 +33,7 @@ The system separates **prompt engineering**, **content generation**, and **prese
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The project is built with a modular structure:
 
@@ -69,9 +69,9 @@ Built using Next.js App Router:
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 📊 Insight Terminal
+###  Insight Terminal
 
 * Generates structured finance insights
 * Emulates investment research tone
@@ -79,7 +79,7 @@ Built using Next.js App Router:
 
 ---
 
-### 🧩 Prompt Registry
+###  Prompt Registry
 
 * Centralized prompt design system
 * Enables:
@@ -90,7 +90,7 @@ Built using Next.js App Router:
 
 ---
 
-### 📄 Progress Report Engine
+###  Progress Report Engine
 
 * Converts DOCX → HTML for web rendering
 * Provides full transparency of:
@@ -101,7 +101,7 @@ Built using Next.js App Router:
 
 ---
 
-### 🎯 Design Philosophy
+###  Design Philosophy
 
 This system follows principles inspired by institutional finance environments:
 
@@ -111,13 +111,13 @@ This system follows principles inspired by institutional finance environments:
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 https://ai-finance-insight-radar.netlify.app
+ https://ai-finance-insight-radar.netlify.app
 
 ---
 
-## 💻 Tech Stack
+##  Tech Stack
 
 * Next.js 14 (App Router)
 * React 18
@@ -127,7 +127,7 @@ This system follows principles inspired by institutional finance environments:
 
 ---
 
-## 📦 Project Setup
+##  Project Setup
 
 Clone the repository:
 
@@ -150,7 +150,7 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 app/
@@ -166,7 +166,7 @@ scripts/
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 
 * No real-time financial data integration
 * Output quality depends on prompt design
@@ -174,7 +174,7 @@ scripts/
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 * API-based financial data integration
 * Prompt testing & evaluation framework
@@ -182,12 +182,12 @@ scripts/
 
 ---
 
-## 📌 Author
+##  Author
 
 Built as part of an AI-driven workflow and prompt engineering project in finance.
 
 ---
 
-## 📜 License
+##  License
 
 This project is for academic and demonstration purposes.
