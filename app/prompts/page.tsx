@@ -37,6 +37,17 @@ export default function PromptsPage() {
       preview: "Output format:\n- Recommended action / next step:\n- Risk or limitation:\n- System Flag: [Generate a specific compliance or deployment warning, e.g., ⚠️ Requires human-in-the-loop for SEC filings]"
     },
     {
+      id: "P-07",
+      name: "LinkedIn Content Generator",
+      purpose: "Draft structured, professional content aligned with selected KOL patterns.",
+      rules: [
+        "Do not start with generic hooks like 'AI is transforming...'",
+        "Translate abstract claims into concrete operational friction points.",
+        "Ensure the visual strategy specifies aspect ratio and avoids generic robot imagery."
+      ],
+      preview: "Requirements:\n- Target audience: [Insert from classification]\n- Tone: Analytical and professional\n- Applied checklist rules: Tension hook, bullet clarity, limitation-setting.\n- Visual Concept: Suggest a workflow diagram or data chart (Aspect ratio 4:5 or 1:1)."
+    },
+    {
       id: "P-08",
       name: "Human Review / System Audit",
       purpose: "Review generated drafts and produce a concise, traceable audit log.",

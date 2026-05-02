@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function ProgressReportPage() {
-  // --- 核心数据层 ---
   const optimizations = [
     { area: "Relevance Router", before: "Used 0–5 scoring without clear calibration", issue: "Scores could be inconsistent", after: "Added scoring calibration for 5, 3, 1, and 0", improvement: "More consistent routing decisions" },
     { area: "Insight Card", before: "Included summary, business implication, and risk", issue: "Actionability was not strong enough", after: "Added 'Recommended Action / Next Step'", improvement: "Makes the insight more useful for analysts" },
@@ -16,64 +15,122 @@ export default function ProgressReportPage() {
     { metric: "LinkedIn Hook", v1: "'AI is transforming financial research.'", v2: "'Investment research does not have an information shortage. It has a filtering problem.'", impact: "More specific, sharper, and aligned with analyst pain points." },
   ];
 
-  // 100% 还原你提供的文本内容
   const posts = [
     {
-      title: "AI Reasoning Models in Investment Research",
+      title: "AI Reasoning Models and the Structure of Financial Research",
       category: "Investment Research & Market Intelligence",
       audit: [
-        "[Original AI Draft Flagged] Overstated impact as 'fully replacing analysts'.",
-        "[Human Override] Adjusted to 'augmenting first-layer research tasks'.",
-        "[Compliance Check] Added limitation on data reliability.",
+        "[Original AI Draft Flagged] Flagged for overly broad claim that AI could 'transform due diligence completely.'",
+        "[Human Override] Replaced with a narrower, more realistic description of compressing the first layer of work.",
+        "[Compliance Check] Passed.",
       ],
-      content: `A lot of attention is going to generative AI in finance.  
-But the real shift may come from reasoning models.
+      content: `A lot of discussion around “AI reasoning models” focuses on technical benchmarks.
+What matters more is how they change the structure of financial research.
 
-Instead of just summarizing reports, these models can:
-• Break down earnings calls  
-• Cross-check assumptions  
-• Flag inconsistencies across sources  
+Most equity research today still follows a familiar pattern:
+• Collect fragmented data (earnings calls, filings, transcripts)
+• Summarize into internal notes
+• Build a view through iterative synthesis
 
-For junior analysts, this doesn't remove work — it changes it.  
-Less time compiling data, more time validating it.
+The bottleneck has never been access to information.
+It is the time required to structure and validate it.
 
-One practical implication:  
-Firms could pilot these tools on earnings transcripts before integrating them into core workflows.
+What these newer models introduce is not automation of judgment, but compression of the first layer of work.
+In practice, this could mean:
+• Faster cross-referencing of earnings narratives across quarters
+• Earlier identification of inconsistencies between management guidance and historical data
+• More time spent stress-testing assumptions rather than compiling inputs
 
-The real question isn't whether AI will replace research.  
-It's whether teams redesign their process fast enough to use it properly.`,
-      image: "Framework diagram of AI-assisted investment research workflow, minimal, professional, 4:5 aspect ratio",
+The implication is subtle but important.
+Research may shift from “information gathering” to “assumption validation”.
+That is where differentiation actually sits.
+
+The question is not whether AI replaces analysts.
+It is whether it changes what good analysis looks like.
+
+#InvestmentResearch #AIinFinance #EquityResearch #FinancialAnalysis`,
+      image: "[Framework Diagram] Minimalist black-and-white framework diagram showing the evolution of financial research workflow: left side 'Traditional Research', right side 'AI-Augmented Research', clean layout, consulting style, high contrast, aspect ratio 4:5.",
     },
     {
-      title: "AI in Internal Finance Workflows",
+      title: "Testing Reasoning Models in Financial Operations Workflows",
       category: "Productivity & Operating Model Transformation",
       audit: [
-        "[Original AI Draft Flagged] Too much consulting jargon.",
-        "[Human Override] Replaced with concrete workflow friction points.",
-        "[Compliance Check] Ensured no exaggerated ROI claims.",
+        "[Original AI Draft Flagged] Contained excessive consulting jargon.",
+        "[Human Override] Replaced abstract claims with concrete operational friction points (handoffs, first-pass work).",
+        "[Compliance Check] Passed. Tone adjusted to emphasize oversight rather than autonomous execution.",
       ],
-      content: `Most discussions about AI in finance focus on front-office use cases.
+      content: `I tested a reasoning model on a basic task this week:
+summarizing an earnings call and highlighting risk signals.
 
-But internal workflows may change faster.
+The output was not “perfect”.
+But it was directionally useful — and more importantly, fast.
 
-Consider approval chains, reporting, and compliance checks.  
-These processes are structured, repetitive, and heavily documented.
+The interesting part is not accuracy in isolation.
+It is how this fits into an existing workflow.
 
-AI doesn't need to "understand everything" to add value here.  
-It only needs to reduce friction in:
-• Document processing  
-• Internal validation  
-• Data reconciliation  
+In most teams, the process still looks like:
+• Junior analyst drafts initial summary
+• Manager reviews and restructures
+• Final version goes through multiple approval layers
 
-The impact is subtle but cumulative.
+The friction is not the task itself.
+It is the handoffs.
 
-Instead of large transformation programs,  
-we may see incremental workflow redesign.
+What AI changes is the starting point.
+Instead of drafting from scratch, teams may begin with:
+• A pre-structured summary
+• Highlighted inconsistencies
+• Suggested areas for deeper review
 
-The firms that win won't be those with the best models.  
-They'll be the ones that redesign their internal processes around them.`,
-      image: "Minimal dashboard showing finance workflow automation, high contrast, clean layout, 4:5 aspect ratio",
+This does not remove oversight.
+If anything, it increases the importance of it.
+But it does reduce the time spent on first-pass work.
+
+The practical question is simple:
+where do you insert this without breaking existing controls?
+
+#DigitalTransformation #FinanceOperations #AIWorkflow #Productivity`,
+      image: "[Workflow Redesign] Professional workflow diagram showing traditional vs AI-assisted financial team process, clean consulting style, minimal colors, structured layout, high contrast, aspect ratio 4:5.",
     },
+    {
+      title: "The Shift from Tool to Product in AI Fintech",
+      category: "Fintech Products & New Business Models",
+      audit: [
+        "[Original AI Draft Flagged] Opened with the overstatement 'AI has changed fintech forever.'",
+        "[Human Override] Reframed the argument as a narrower business-model distinction focusing on trust, compliance, and user intent.",
+        "[Compliance Check] Passed.",
+      ],
+      content: `Most people are still thinking about AI in finance as a tool.
+That framing is already outdated.
+
+The more interesting shift is happening at the product level.
+AI is starting to reshape what a “financial product” actually looks like:
+• Interfaces become conversational
+• Decision logic becomes adaptive
+• Value moves from access to intelligence
+
+This has two immediate implications for fintech:
+• Products may no longer compete on features alone
+• They compete on how well they interpret user intent
+
+Distribution may change.
+If interfaces become embedded in workflows, traditional app boundaries matter less.
+
+We have seen this pattern before in other industries.
+What is different here is the regulatory layer.
+Not every innovation scales in finance.
+
+The winners will likely be the ones that can balance:
+• user experience
+• decision transparency
+• compliance requirements
+
+The question is not who builds the best model.
+It is who builds the most trusted product on top of it.
+
+#Fintech #AIProducts #FinancialInnovation #ProductStrategy`,
+      image: "[Modern Infographic] Modern fintech infographic showing evolution from traditional financial products to AI-driven products, with layers like 'Interface', 'Decision Logic', 'Value Proposition', clean layout, bold typography, aspect ratio 1:1.",
+    }
   ];
 
   // --- 机构级设计 Token ---
@@ -91,7 +148,7 @@ They'll be the ones that redesign their internal processes around them.`,
   const fonts = {
     serif: "Georgia, 'Times New Roman', Times, serif",
     sans: "Arial, 'Helvetica Neue', Helvetica, sans-serif",
-    mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" // 添加等宽字体用于 Audit Log
+    mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
   };
 
   const SectionTitle = ({ title, subtitle }: { title: string, subtitle?: string }) => (
@@ -209,7 +266,7 @@ They'll be the ones that redesign their internal processes around them.`,
           </div>
         </section>
 
-        {/* 4. Before vs After Evidence (去除了多余的蓝色竖线) */}
+        {/* 4. Before vs After Evidence */}
         <section style={{ marginBottom: "64px" }}>
           <SectionTitle title="4. Optimization Evidence" subtitle="Before & After Output Comparisons" />
           <div style={{ overflowX: "auto", border: `1px solid ${colors.border}` }}>
@@ -226,7 +283,6 @@ They'll be the ones that redesign their internal processes around them.`,
                   <tr key={i} style={{ borderBottom: `1px solid ${colors.border}` }}>
                     <td style={{ padding: "16px", fontWeight: "bold", color: colors.accentBlue }}>{ev.metric}</td>
                     <td style={{ padding: "16px", color: colors.textMuted, fontStyle: "italic" }}>{ev.v1}</td>
-                    {/* 删除了 borderLeft: `3px solid ${colors.accentBlue}` */}
                     <td style={{ padding: "16px", color: colors.textPrimary, fontWeight: "500" }}>{ev.v2}</td>
                   </tr>
                 ))}
@@ -235,7 +291,7 @@ They'll be the ones that redesign their internal processes around them.`,
           </div>
         </section>
 
-        {/* 5. Content Output Showcase (精修UI，取消重边框) */}
+        {/* 5. Content Output Showcase */}
         <section style={{ marginBottom: "64px" }}>
           <SectionTitle title="5. Final System Outputs" subtitle="Generated Insights & Audit Logs" />
           <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
@@ -250,7 +306,6 @@ They'll be the ones that redesign their internal processes around them.`,
                   {post.title}
                 </h3>
                 
-                {/* 升级版 Audit Log：去除笨重边框，增加系统终端感 */}
                 <div style={{ backgroundColor: "#f8fafc", border: `1px solid ${colors.border}`, borderRadius: "4px", padding: "16px", marginBottom: "24px" }}>
                   <p style={{ margin: "0 0 8px 0", fontSize: "11px", fontWeight: "bold", color: colors.textSecondary, textTransform: "uppercase", letterSpacing: "1px", fontFamily: fonts.mono }}>
                     <span style={{ color: colors.accentBlue, marginRight: "6px" }}>▶</span> System Audit Log
@@ -264,7 +319,6 @@ They'll be the ones that redesign their internal processes around them.`,
                   {post.content}
                 </div>
 
-                {/* 升级版 Visual Strategy：做成轻量级的标签尾巴 */}
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", fontSize: "12px", color: colors.textSecondary, backgroundColor: "#f1f5f9", padding: "8px 12px", borderRadius: "4px" }}>
                   <span style={{ fontWeight: "bold", color: colors.textPrimary, textTransform: "uppercase", letterSpacing: "0.5px", fontSize: "10px" }}>Visual Strategy</span> 
                   <span style={{ color: colors.border }}>|</span>
